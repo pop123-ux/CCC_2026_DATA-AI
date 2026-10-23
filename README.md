@@ -58,6 +58,10 @@ flowchart LR
 5. **Gating:** a model is promoted only after winning a **200-game match** against the current best, using the same 100-simulation MCTS referee as the arena.
 6. **Continuous improvement loop:** during the contest a background loop on a RunPod A40 GPU kept generating deeper-labelled data, fine-tuning from the current best, and gating every new model.
 
+(Yes, we actually rented GPUs for this competition lol, proven extremely useful and helped us reach ~#43 global from previous ~#190 due to the sheer speed the extra compute added and due to the more complex model used)
+<img width="738" height="138" alt="images" src="https://github.com/user-attachments/assets/e106ed40-eb81-4797-84ff-214ac4113d09" />
+_(Runpod please sponsor us 🙏)_
+
 ---
 
 ## Model architecture
@@ -107,7 +111,7 @@ Full table with per-color splits: [`results/model_evaluations.csv`](results/mode
 
 - `b64` went from rating **1,435 → 1,900+** and global **#134 → #43**, winning **25 of its first 30 games (83%)**, evenly split between cyan and magenta.
 - Peak: **2,009 rating** and **local #8**.
-- In the last 15 minutes, late model swaps (`b64` re-upload → `a96` → `it1` → `a96`) were amplified by Glicko-2's uncertainty reset: **+100** after one upload, **−120** after another. The final result was **local #14**.
+- In the last 15 minutes, late model swaps (`b64` re-upload → `a96` → `it1` → `a96`) were amplified by Glicko-2's uncertainty reset: **+100** after one upload, **−120** after another. The final result was **local #14, global #43**.
 
 ### Live rank forecasting
 
@@ -141,7 +145,7 @@ docs/TIMELINE.md                # What happened, minute by minute
 docs/LESSONS.md                 # Takeaways on training, gating and rating systems
 ```
 
-**Not included:** the official contest level files (CCC property), the C engine and data generators from the contest machine (left on the terminated GPU pod), the ~540k-position dataset, and `c96` (not saved). See [`models/README.md`](models/README.md) for what each saved model is.
+**Not included:** the official contest level files (CCC property), the C engine and data generators from the contest machine (left on the terminated GPU pod), the ~540k-position dataset. See [`models/README.md`](models/README.md) for what each saved model is.
 
 ## Running the model code
 
@@ -153,7 +157,7 @@ python analysis/simulate_final_rank.py # reproduces the rank-forecast charts
 
 ## Tools
 
-Python · PyTorch · ONNX / ONNX Runtime · NumPy · Matplotlib · C (game engine) · RunPod (NVIDIA A40) · JupyterLab. Claude was used as an AI pair-programmer during the contest.
+Python · PyTorch · ONNX / ONNX Runtime · NumPy · Matplotlib · C (game engine) · RunPod (NVIDIA A40) · JupyterLab. Claude Opus 5.5 on Max was used as an AI pair-programmer during the contest (vibe-coding was a huge advantage and the majority of teams had at least one member using generative ai tools either to guide the model engineering process or to `outrageously` nuclear-prompt agents into delivering final solutions without understanding the process of obtaining those; frankly we did a bit of both, and I think this was the best combination between having fun, learning something new, and being competitive on the leaderboard :)
 
 ## License
 
