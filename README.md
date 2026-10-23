@@ -1,4 +1,6 @@
 # CCC 2026 · Data & AI: *Colony: One* (Level 4 Tournament)
+<img width="1200" height="630" alt="og-image" src="https://github.com/user-attachments/assets/c864ce10-f1ee-4b3b-bce7-764791a495f3" />
+_Cloudflight Coding Contest_
 
 **Team Softmaxers**: **#14 local place** at **CREIC Cluj-Napoca**, 42nd Cloudflight Coding Contest (CCC), Data & AI edition, 23 October 2026.
 
