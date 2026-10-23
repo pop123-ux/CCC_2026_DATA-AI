@@ -60,6 +60,7 @@ flowchart LR
 
 (Yes, we actually rented GPUs for this competition lol, proven extremely useful and helped us reach ~#43 global from previous ~#190 due to the sheer speed the extra compute added and due to the more complex model used)
 <img width="738" height="138" alt="images" src="https://github.com/user-attachments/assets/e106ed40-eb81-4797-84ff-214ac4113d09" />
+
 _(Runpod please sponsor us 🙏)_
 
 ---
