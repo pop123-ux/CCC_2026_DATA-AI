@@ -160,7 +160,15 @@ python analysis/simulate_final_rank.py # reproduces the rank-forecast charts
 
 ## Tools
 
-Python · PyTorch · ONNX / ONNX Runtime · NumPy · Matplotlib · C (game engine) · RunPod (NVIDIA A40) · JupyterLab. Claude Opus 5.5 on Max was used as an AI pair-programmer during the contest (vibe-coding was a huge advantage and the majority of teams had at least one member using generative ai tools either to guide the model engineering process or to `outrageously` nuclear-prompt agents into delivering final solutions without understanding the process of obtaining those; frankly we did a bit of both, and I think this was the best combination between having fun, learning something new, and being competitive on the leaderboard :)
+Python · PyTorch · ONNX / ONNX Runtime · NumPy · Matplotlib · C (game engine) · RunPod (NVIDIA A40) · JupyterLab. Claude Opus 5.5 on Max was used as an AI pair-programmer during the contest
+
+Vibe-coding was a huge advantage and the majority of teams had at least one member using generative ai tools either to guide the model engineering process or to `outrageously` nuclear-prompt agents into delivering final solutions without understanding the process of obtaining those; frankly we did a bit of both, and I think this was the best combination between having fun, learning something new, and being competitive on the leaderboard :)
+
+## Ending Note
+
+An extremely enjoyable experience due to the sheer pressure of keeping up with other teams and due to the uniqueness of the challenge, inspired maybe by the iminent upcoming of AGI (when I first saw the Colony-style game, my first thought was "Oh, this seems similar to the ARC-AGI benchmark"), we haven't even thought of a reinforcement-learning (RL) based challenge. Other than that, I met new people, learned interesting and useful things, discussed ideas and have taken an interview at the end to share my personal experience at this event.
+
+Recommend `the CCC` experience to anyone tech-driven and eager to face a new challenge, also the pizza at the end and the free merch given really gathered more people to the event for sure :)
 
 ## License
 
