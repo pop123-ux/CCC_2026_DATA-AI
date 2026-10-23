@@ -1,0 +1,5 @@
+torch>=2.2
+numpy>=1.26
+onnx>=1.15
+onnxruntime>=1.17
+matplotlib>=3.8

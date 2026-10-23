@@ -1,0 +1,12 @@
+challenger,opponent,games,challenger_wins,win_rate,ci_95,approx_elo,challenger_as_cyan,challenger_as_magenta,outcome,note
+a64,handwritten_evaluator,200,172,0.860,0.050,315,87/100,85/100,promoted,first trained network (64x6) vs the hand-written graph that was deployed
+a96,handwritten_evaluator,200,172,0.860,0.050,315,87/100,85/100,not used,96x6 trained on the same data; same strength as a64 but slower
+b64,a64,200,133,0.665,0.066,119,73/100,60/100,promoted,64x6 trained on all 734 shards (542k positions)
+b64,handwritten_evaluator,200,181,0.905,0.041,392,93/100,88/100,deployed,first model deployed to the arena
+c64,b64,200,98,0.490,0.069,-7,50/100,48/100,rejected,fine-tune of b64 at lower LR; no gain
+c96,b64,200,122,0.610,0.067,78,62/100,60/100,promoted,96x6 trained from scratch on all data
+d96,c96,200,96,0.480,0.069,-14,51/100,45/100,rejected,fine-tune of c96; no gain
+d96,b64,200,116,0.580,0.068,56,65/100,51/100,not used,
+it1,c96,200,113,0.565,0.069,45,58/100,55/100,promoted,auto-loop: c96 fine-tuned with new deeper-labelled (al+4) data
+it2,it1,200,102,0.510,0.069,7,56/100,46/100,rejected,auto-loop round 2; below 55% gate
+it3,it1,200,106,0.530,0.069,21,57/100,49/100,rejected,auto-loop round 3; below 55% gate
