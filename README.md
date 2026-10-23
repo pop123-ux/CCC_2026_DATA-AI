@@ -22,7 +22,9 @@ Level 4 of the contest was a live AI tournament. Every team uploaded an **ONNX n
 *Colony: One* is a two-player game (Cyan vs Magenta) on an 8×8 board with six piece types, including a **Kernel** (the king-like piece), **bodyguards**, a **firewall** mechanic and a "bare-kernel" endgame. Every move is either a 1–3 square step in one of 8 directions or a knight jump, so the full action space is 64 × 64 = **4,096 from→to moves**.
 
 The tournament referee does **not** let the model choose moves directly. It runs **Monte Carlo Tree Search (100 simulations per move)** and queries the model for:
+
 <img width="800" height="321" alt="mcts" src="https://github.com/user-attachments/assets/e6e28458-7580-4004-9fc4-f15a77ba46ee" />
+
 _(Monte Carlo Tree Search - Source: GeeksforGeeks)_
 
 - `policy`: 4,096 raw logits (which moves to explore first)
